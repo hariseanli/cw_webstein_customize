@@ -1,0 +1,42 @@
+#ywsbs_subscription_disable_renewal{
+  display:inline-block;
+  background: #c0392b !important;
+  color: #fff !important;
+  padding:.618em 1em;
+  cursor:pointer;
+}
+#ywsbs_subscription_disable_renewal[intend_status="no"]{
+  background:#7acfd9 !important;
+  color:#000 !Important;
+}
+#ywsbs_subscription_disable_renewal.loading{
+  pointer-events:none;
+  background:#999 !Important;;
+cursor:progress;
+}
+.ywsbs-subscription-info-item.status-item{
+  
+}
+
+
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm [id="_wc_other/mc4wp/optin_field"] label,
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm label[for="mailchimp_woocommerce_is_subscribed"],
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm label[for="mailchimp_woocommerce_is_unsubscribed"],
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm label[for="mailchimp_woocommerce_is_transactional"]{
+  position:relative;
+  pointer-events:auto;
+}
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm [for="mailchimp_woocommerce_is_subscribed"] [type="radio"],
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm [for="mailchimp_woocommerce_is_unsubscribed"] [type="radio"],
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm [for="mailchimp_woocommerce_is_transactional"] [type="radio"]{
+  display:inline-block;
+  margin-right:10px;
+}
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm label[for="mailchimp_woocommerce_is_subscribed"],
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm label[for="mailchimp_woocommerce_is_unsubscribed"]{
+   margin-bottom:-20px 
+}
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm button[name="save_account_details"]{
+  padding-left:10px;
+  padding-right:10px;
+}
