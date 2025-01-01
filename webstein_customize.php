@@ -839,11 +839,14 @@ class class_webstein_customize{
 		global $wpdb;
 		$data_subscription_raw = $this->get_subscription_with_no_entry();
 		$data_subscription_list = $data_subscription_raw['full_data'];
-		if(count($data_subscription_list)<1){
-			wp_send_json_error( array( 'message' => "there is no data to process"));
-			wp_die();
-			return;
+		if($data_subscription_list){
+			if(count($data_subscription_list)<1){
+				wp_send_json_error( array( 'message' => "there is no data to process"));
+				wp_die();
+				return;
+			}	
 		}
+		
 
 
 		foreach($data_subscription_list as $item_n){
@@ -1137,7 +1140,7 @@ class class_webstein_customize{
 		}
 
 		?>
-		<div class="ywsbs-subscription-info-item" style="display:none;">
+		<div class="ywsbs-subscription-info-item item_auto_renewal" status="<?php echo $status; ?>">
 			<strong>Renewal Action :</strong> 
 			<span href="#" id="ywsbs_subscription_disable_renewal" class="stop_renewal" intend_status="<?php echo $disable_new_status; ?>" sub_id="<?php echo $subscription->id; ?>"> <?php echo $disable_text; ?> </span>
 		</div>

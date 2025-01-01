@@ -168,8 +168,13 @@ if (!empty($order_ids)) {
 
 	foreach ($order_ids as $order_id) {
 		$order = wc_get_order($order_id);
-		$billing_first_name = $order->get_billing_first_name();
-        $billing_last_name = $order->get_billing_last_name();
+		if ( $order instanceof WC_Order_Refund ) {
+			continue;
+		}
+		$billing_first_name = "";
+		$billing_last_name = "";
+		// $billing_first_name = $order->get_billing_first_name();
+        // $billing_last_name = $order->get_billing_last_name();
         $billing_email = $order->get_billing_email();
         $order_date = $order->get_date_created();
         $is_a_renew = $order->get_meta( 'is_a_renew' );

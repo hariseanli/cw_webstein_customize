@@ -40,3 +40,11 @@ cursor:progress;
   padding-left:10px;
   padding-right:10px;
 }
+
+.ywsbs-subscription-info-item.status_action_btn{
+  display:none;
+}
+
+.ywsbs-subscription-info-item.item_auto_renewal[status="cancelled"]{
+  display:none;
+}
